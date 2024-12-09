@@ -15,7 +15,7 @@ const Categories = () => {
     { name: "Furniture & Home Decor", color: "bg-red-400", image: "./src/assets/furniture.png" },
     { name: "Fashion & Beauty", color: "bg-blue-200", image: "./src/assets/fashion.png" },
     { name: "Books, Sports & Hobbies", color: "bg-orange-300", image: "./src/assets/books.png" },
-    { name: "Kids", color: "bg-pink-300" , image: "./src/assets/kids.png" },
+    { name: "Kids", color: "bg-pink-300", image: "./src/assets/kids.png" },
   ];
 
   return (
@@ -23,17 +23,22 @@ const Categories = () => {
       <h1 className="text-lg font-bold mb-6">All categories</h1>
       <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-6">
         {categories.map((category, index) => (
-          <div key={index} className="flex flex-col items-center space-y-2">
+          <div
+            key={index}
+            className="flex flex-col items-center space-y-2 group transition duration-300"
+          >
             <div
-              className={`${category.color} w-16 h-16 flex justify-center items-center rounded-full`}
+              className={`${category.color} w-16 h-16 flex justify-center items-center rounded-full transition-transform transform group-hover:scale-110 group-hover:brightness-90`}
             >
               <img
                 src={category.image}
                 alt={category.name}
-                className="w-10 h-10 object-contain"
+                className="w-10 h-10 object-contain transition-transform transform group-hover:scale-110"
               />
             </div>
-            <p className="text-center text-sm font-medium">{category.name}</p>
+            <p className="text-center text-sm font-medium group-hover:text-blue-600">
+              {category.name}
+            </p>
           </div>
         ))}
       </div>
