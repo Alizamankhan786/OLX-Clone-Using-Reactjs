@@ -8,6 +8,8 @@ import Houses from "./components/Houses";
 import Cars from "./components/Cars";
 import Videos from "./components/Videos";
 import Tablets from "./components/Tablets";
+import Jobs from "./components/Jobs";
+import Footer from "./components/Footer";
 
 function App() {
   return (
@@ -21,6 +23,8 @@ function App() {
       <Cars />
       <Videos />
       <Tablets />
+      <Jobs />
+      <Footer />
     </div>
   );
 }
